@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    border: 0;
+}
+.container
+{
+    margin-top: 14em;
+    
+}
+form{
+    background-color: aquamarine;
+    padding: 1em;
+    border-radius: 8px;
+}
