@@ -8,10 +8,10 @@ $(document).ready(function() {
         var date=$('#date').val();
 		var Password = $('#password').val();
 		
-        
+        console.log("Received")
 		$.ajax({
-			url: 'http://localhost:3000/php/register.php',
-			type: 'POST',
+			url: "http://localhost:3000/php/register.php",
+			type: "POST",
 			data: {
 				username: Name,
 				password: Password,
@@ -20,23 +20,23 @@ $(document).ready(function() {
                 useremail:email
 			},
 			success:  function(response) {
-                var result=JSON.parse(response)
+                var result=JSON.parse(response);
+				console.log(result)
                 if(result.status)
                 {
 				$('#result').html("Registration successful");
                 console.log(JSON.parse(response).status);
-                 winlocalStorage.setItem('name',Name)
+                 window.localStorage.setItem('email',email)
                 window.location.replace("profile.html")
                 }
                 else{
-                    $('#result').html("Something went wrong")
+                    $('#result').html(result.msg)
                 }
-                // alert("success")
 			},
 			error: function()
 			{
 				console.log("Error")
-			}
+			},
 
 		});
     

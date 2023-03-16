@@ -27,6 +27,7 @@
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/profile.js"></script>
+    <link rel="stylesheet" href="./css/profile.css" />
     <title>Profile</title>
 </head>
 <body>
@@ -35,13 +36,51 @@
             <div class="col-sm-0  col-md-2"></div>
             <div class="col-sm-12  col-md-8">
                 <div class="profile">
-                <div class="profile-container">
-                    Name:<p id="name"></p>
-                    Phone Number:<p id="number"></p>
-                    Email:<p id="email"></p>
-                    Date of Birth:<p id="dob"></p>
-                </div>
-                <button id="logout">logout</button>
+                  <form id="submit">
+                    <img src="../assets/profile.png" class="rounded mx-auto d-block" alt="..." >
+                    <h1 class="d-flex justify-content-around">Profile</h1>
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input
+                        type="text"
+                        required
+                        class="form-control"
+                        id="name"
+                        aria-describedby="emailHelp"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email address</label>
+                      <input
+                        required
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        aria-describedby="emailHelp"
+                      />
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="Password">Phone Number</label>
+                      <input
+                        required
+                        type="number"
+                        class="form-control"
+                        id="number"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="date">Date Of Birth</label>
+                      <input
+                        required
+                        type="date"
+                        class="form-control"
+                        id="dob"
+                      />
+                    </div>
+                    <p id="msg"></p>
+                    <button class="btn btn-outline-warning " id="update"></button>    
+                <button class="btn btn-outline-info " id="logout">logout</button>
             </div>
             </div> 
             <div class="col-sm-0  col-md-2"></div>
