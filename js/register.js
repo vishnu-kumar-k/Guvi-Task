@@ -1,18 +1,13 @@
 // includes('../php');
 $(document).ready(function() {
-	$('#submit').click(function(e) {
+	$('#submit').submit(function(e) {
 		e.preventDefault();
-   console.log("Called")
         var Name =$('#username').val();
 		var email=$('#email').val();
         var number=$('#Phone_number').val();
         var date=$('#date').val();
 		var Password = $('#password').val();
-		if(Name.length===0 || email.length===0 || number.length!==10 || date.length===0 || Password.length===0)
-        {
-            $('#result').html("Please fill all details")
-        }
-        else{
+		
         
 		$.ajax({
 			url: 'http://localhost:3000/php/register.php',
@@ -44,7 +39,7 @@ $(document).ready(function() {
 			}
 
 		});
-    }
+    
 
 	});
 });

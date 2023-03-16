@@ -1,6 +1,6 @@
 // includes('../php');
 $(document).ready(function () {
-  $("#submit").click(function (e) {
+  $("#submit").submit(function (e) {
     e.preventDefault();
     var email = $("#useremail").val();
     var Password = $("#password").val();
