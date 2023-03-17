@@ -7,10 +7,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 	header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
     $user = $_POST['username'];
 	$pass = $_POST['password'];
-    $servername = "guvi.cvvq0uavgzap.eu-north-1.rds.amazonaws.com";
-	$username = "admin";
-	$password = "administrator";
-	$dbname = "guvi";
+    $servername = "localhost";
+    $username = "root";
+    $password = "password";
+    $dbname = "guvi";
 
 	$conn = new mysqli($servername, $username, $password, $dbname);
 	if ($conn->connect_error) {
