@@ -6,9 +6,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['profile'])) {
     header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
     $email = $_POST['email'];
 
-    $servername = "guvi.cvvq0uavgzap.eu-north-1.rds.amazonaws.com";
-    $username = "admin";
-    $password = "administrator";
+    $servername = "localhost";
+    $username = "root";
+    $password = "password";
     $dbname = "guvi";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
